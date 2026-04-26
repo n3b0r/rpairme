@@ -30,7 +30,15 @@
 
         {block name='page_content'}
           {block name='hook_home'}
-            {$HOOK_HOME nofilter}
+            {hook h='displayHome' mod='is_imageslider'}
+            {hook h='displayHome' mod='ps_banner'}
+
+            {block name='featured_categories'}
+              {include file='components/featured-categories.tpl'}
+            {/block}
+
+            {hook h='displayHome' mod='ps_featuredproducts'}
+            {hook h='displayHome' mod='ps_customtext'}
           {/block}
         {/block}
       </section>

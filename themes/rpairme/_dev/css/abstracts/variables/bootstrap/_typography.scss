@@ -1,10 +1,11 @@
-$font-family-sans-serif:      "Exo 2", sans-serif;
+$font-family-sans-serif:      "Open Sans", sans-serif;
 $font-family-base:            $font-family-sans-serif;
+$headings-font-family:        "Exo 2", sans-serif;
 
 $font-size-base:              rem-calc(16px);
 $font-size-lg:                $font-size-base * 1.125;
 $font-size-sm:                $font-size-base * .875;
-$font-size-xs:                $font-size-base * .6875;
+$font-size-xs:                rem-calc(12px);
 
 $font-weight-lighter:         200;
 $font-weight-light:           300;

@@ -22,21 +22,11 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
-<div id="_desktop_contact_link" class="col">
-  <div id="contact-link">
-    {if $contact_infos.phone}
-      {* [1][/1] is for a HTML tag. *}
-      {l
-        s='Call us: [1]%phone%[/1]'
-        sprintf=[
-          '[1]' => "<a href='tel:{$contact_infos['phone']|replace:' ':''}'>",
-          '[/1]' => '</a>',
-          '%phone%' => $contact_infos.phone
-        ]
-        d='Shop.Theme.Global'
-      }
-    {else}
-      <a href="{$urls.pages.contact}">{l s='Contact us' d='Shop.Theme.Global'}</a>
-    {/if}
-  </div>
+<div id="_desktop_contact_link" class="col d-flex justify-content-between text-white font-xs font-weight-bold">
+	<div id="contact-info">
+		soporte@rpair.me | 900 550 440
+	</div>
+	<div id="free-shipping">
+		Envíos gratuitos por pedidos superiores a 50€
+	</div>
 </div>

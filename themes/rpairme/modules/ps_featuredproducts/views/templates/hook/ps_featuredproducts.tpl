@@ -29,6 +29,20 @@
   {l s='Popular Products' d='Shop.Theme.Catalog'}
 {/block}
 
+{block name='featured_products_navigation'}{/block}
+
+{block name='featured_products_slider'}
+  <div class="products-list row">
+    {foreach from=$products item="product" name=featured_products}
+      {if $smarty.foreach.featured_products.iteration <= 8}
+        {block name='product_miniature'}
+          {include file='catalog/_partials/miniatures/product.tpl' product=$product type='listing'}
+        {/block}
+      {/if}
+    {/foreach}
+  </div>
+{/block}
+
 {block name='featured_products_footer'}
   <a class="btn btn-secondary" href="{$allProductsLink}">
     {l s='All products' d='Shop.Theme.Catalog'}

@@ -2,8 +2,9 @@
 
 .search-form {
   position: relative;
-  max-width: rem-calc(620px);
-  margin: 0 auto;
+  width: 100%;
+  max-width: rem-calc(640px);
+  margin: 0 5% 0 auto;
 
   &__form-group {
     position: relative;
@@ -15,12 +16,12 @@
   }
 
   &__input {
-    height: $search-input-height;
-    padding: 0 rem-calc(70px) 0 rem-calc(30px);
-    line-height: $search-input-height;
+    height: rem-calc(42px);
+    padding: 0 rem-calc(24px) 0 rem-calc(50px);
+    line-height: rem-calc(42px);
     color: $gray-900;
-    border-width: 1px;
-    border-radius: 99em;
+    border: none;
+    border-radius: 10px;
 
     &:focus {
       background: $gray-100;
@@ -31,12 +32,27 @@
 
   &__btn {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0 map.get($spacers, 3);
+    top: 50%;
+    left: rem-calc(16px);
+    width: rem-calc(20px);
+    height: rem-calc(20px);
+    padding: 0;
     line-height: 1;
-    color: $primary;
+    color: $gray-700;
+    background: transparent;
+    border: 0;
+    transform: translateY(-50%);
+  }
+
+  &__icon-svg {
+    display: block;
+    width: rem-calc(18px);
+    height: rem-calc(18px);
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 }
 

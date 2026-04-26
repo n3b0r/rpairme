@@ -46,10 +46,12 @@
 		</ul>
     {/if}
 {/function}
-<div class="container">
-	<div class="d-none d-md-block col-12 header-top__block header-top__block--menu mt-1 row">
-		<div class="main-menu" id="_desktop_top_menu">
-            {menu nodes=$menu.children}
+<div class="border-bottom">
+	<div class="container">
+		<div class="d-none d-md-block col-12 header-top__block header-top__block--menu row">
+			<div class="main-menu" id="_desktop_top_menu">
+                {menu nodes=$menu.children}
+			</div>
 		</div>
 	</div>
 </div>
