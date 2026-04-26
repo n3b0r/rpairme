@@ -41,5 +41,16 @@
 {/if}
 
 {block name='page_content'}
+  <div class="contact-map mb-4">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.7963272904108!2d-0.9374874224951333!3d41.66014237126648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd596ad48597adc9%3A0x54a5d7d8d6dbf0e1!2sVGS%3A%20Especialistas%20en%20desarrollo%20de%20proyectos%20digitales!5e0!3m2!1ses!2ses!4v1777225090926!5m2!1ses!2ses"
+      width="100%"
+      height="380"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
   {widget name="contactform"}
 {/block}
