@@ -4,7 +4,6 @@
 
 {if file_exists($preloadFilePath)}
   {capture name="preloadBlock"}{include file=$preloadFilePath}{/capture}
-
-  {$smarty.capture.preloadBlock|replace:'/themes/':"`$urlsWithCdn`themes/" nofilter}
+  {assign var="normalizedPreloadBlock" value=$smarty.capture.preloadBlock|regex_replace:'@https?://[^/]+/themes/@':"`$urlsWithCdn`themes/"|replace:'/themes/':"`$urlsWithCdn`themes/"}
+  {$normalizedPreloadBlock nofilter}
 {/if}
-

@@ -54,39 +54,90 @@ $material-design-icons-font-directory-path: '~material-design-icons-iconfont/dis
   font-feature-settings: "liga";
 }
 
-/* roboto-regular - latin-ext_latin */
 @font-face {
-  font-family: Roboto;
+  font-family: "Exo 2";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("./fonts/roboto-v20-latin-ext_latin-regular.woff2") format("woff2"), url("./fonts/roboto-v20-latin-ext_latin-regular.woff") format("woff");
+  src: url("./fonts/Exo2-Regular.ttf") format("truetype");
 }
 
-/* roboto-500 - latin-ext_latin */
 @font-face {
-  font-family: Roboto;
+  font-family: "Exo 2";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("./fonts/roboto-v20-latin-ext_latin-500.woff2") format("woff2"), url("./fonts/roboto-v20-latin-ext_latin-500.woff") format("woff");
+  src: url("./fonts/Exo2-Medium.ttf") format("truetype");
 }
 
-/* roboto-italic - latin-ext_latin */
 @font-face {
-  font-family: Roboto;
-  font-style: italic;
-  font-weight: 400;
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 600;
   font-display: swap;
-  src: url("./fonts/roboto-v20-latin-ext_latin-italic.woff2") format("woff2"), url("./fonts/roboto-v20-latin-ext_latin-italic.woff") format("woff");
+  src: url("./fonts/Exo2-SemiBold.ttf") format("truetype");
 }
 
-/* roboto-700 - latin-ext_latin */
 @font-face {
-  font-family: Roboto;
+  font-family: "Exo 2";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("./fonts/roboto-v20-latin-ext_latin-700.woff2") format("woff2"), url("./fonts/roboto-v20-latin-ext_latin-700.woff") format("woff");
+  src: url("./fonts/Exo2-Bold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("./fonts/Exo2-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("./fonts/Exo2-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/OpenSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/OpenSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/OpenSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("./fonts/OpenSans-ExtraBold.ttf") format("truetype");
+}

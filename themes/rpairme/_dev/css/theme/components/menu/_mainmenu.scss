@@ -97,6 +97,12 @@
     &--top {
       &:first-child {
         border: 0;
+
+        @include media-breakpoint-up(md) {
+          #{$self}__item-link--top {
+            padding-left: 0;
+          }
+        }
       }
     }
 

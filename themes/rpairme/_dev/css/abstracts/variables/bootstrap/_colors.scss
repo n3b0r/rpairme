@@ -31,3 +31,13 @@ $warning:       #ff9a52;
 $danger:        $red;
 $light:         $gray-100;
 $dark:          $gray-800;
+
+$rpairme-lime: #C2F03A;
+$rpairme-green: #4DAD62;
+$rpairme-black: #111412;
+
+$theme-colors: (
+  "rpairme-lime": $rpairme-lime,
+  "rpairme-green": $rpairme-green,
+  "rpairme-black": $rpairme-black,
+);
