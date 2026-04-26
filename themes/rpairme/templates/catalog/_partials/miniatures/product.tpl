@@ -32,18 +32,43 @@
     {/if}
     >
     <article
-      class="product-miniature card js-product-miniature p-2 h-100 {block name='product_miniature_item_class'}{/block}"
+      class="product-miniature product-miniature--card card js-product-miniature h-100 {block name='product_miniature_item_class'}{/block}"
       data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}"
       >
-      {include file='catalog/_partials/miniatures/_partials/product-thumb.tpl' thumbExtraClass='mb-2'}
+      <div class="product-miniature__media">
+        {include
+          file='catalog/_partials/miniatures/_partials/product-thumb.tpl'
+          thumbExtraClass='product-miniature__thumb--card'
+          showFlags=false
+          showQuickView=false
+          showReviews=false
+        }
 
-      {include file='catalog/_partials/miniatures/_partials/product-title.tpl'}
+        {if $product.has_discount}
+          <span class="product-miniature__discount-badge">
+            {l s='Dto' d='Shop.Theme.Catalog'} {$product.discount_to_display}
+          </span>
+        {/if}
+      </div>
 
-      {include file='catalog/_partials/miniatures/_partials/product-prices.tpl'}
+      <div class="product-miniature__content">
+        {include file='catalog/_partials/miniatures/_partials/product-title.tpl'}
 
-      {block name='product_form'}
-        {include file='catalog/_partials/miniatures/_partials/product-form.tpl'}
-      {/block}
+        <div class="product-miniature__price-line">
+          <span class="price product-miniature__price" aria-label="{l s='Price' d='Shop.Theme.Catalog'}">{$product.price}</span>
+          {if $configuration.taxes_enabled && $configuration.display_taxes_label}
+            <span class="product-miniature__tax">{$product.labels.tax_long}</span>
+          {/if}
+        </div>
+
+        {if $product.has_discount}
+          <div class="product-miniature__divider"></div>
+
+          <div class="product-miniature__saving{if !$product.has_discount} product-miniature__saving--empty{/if}">
+              {l s='En rebajas - Ahorra %amount%' d='Shop.Theme.Catalog' sprintf=['%amount%' => $product.discount_to_display]}
+          </div>
+        {/if}
+      </div>
 
     </article>
   </div>

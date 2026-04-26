@@ -19,18 +19,24 @@
           />
       {/images_block}
 
-      {include file='catalog/_partials/product-flags.tpl'}
+      {if !isset($showFlags) || $showFlags}
+        {include file='catalog/_partials/product-flags.tpl'}
+      {/if}
     </a>
 
-    {block name='quick_view'}
-      <a class="quick-view product-miniature__functional-btn btn btn-light shadow rounded-circle" href="#" data-link-action="quickview">
-        <span class="material-icons product-miniature__functional-btn-icon">visibility</span>
-      </a>
-    {/block}
+    {if !isset($showQuickView) || $showQuickView}
+      {block name='quick_view'}
+        <a class="quick-view product-miniature__functional-btn btn btn-light shadow rounded-circle" href="#" data-link-action="quickview">
+          <span class="material-icons product-miniature__functional-btn-icon">visibility</span>
+        </a>
+      {/block}
+    {/if}
 
 
-    {block name='product_reviews'}
-      {hook h='displayProductListReviews' product=$product}
-    {/block}
+    {if !isset($showReviews) || $showReviews}
+      {block name='product_reviews'}
+        {hook h='displayProductListReviews' product=$product}
+      {/block}
+    {/if}
   </div>
 {/block}

@@ -1,9 +1,9 @@
 {block name='featured_products'}
-  <div class="featured-products my-4 {block name='featured_products_class'}{/block}">
+  <div class="featured-products mt-4 {block name='featured_products_class'}{/block}">
 
     {block name='featured_products_header'}
-      <div class="featured-products__header d-flex align-items-center mb-3">
-          <p class="featured-products__title h1 font-weight-normal m-0">
+      <div class="featured-products__header d-flex align-items-center mb-6">
+          <p class="featured-products__title h1 font-weight-normal mb-0">
               Nuestros componentes <span class="font-weight-bold underline-rpairme-lime">más demandados</span>
           </p>
         {block name='featured_products_navigation'}
@@ -49,13 +49,5 @@
         {/block}
       </div>
     {/block}
-
-    {block name='featured_products_footer' hide}
-      <div class="featured-products__footer mt-4 text-right">
-        {$smarty.block.child}
-      </div>
-    {/block}
-
-
   </div>
 {/block}
