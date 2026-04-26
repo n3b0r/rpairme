@@ -26,3 +26,10 @@
 .font-base {
   @include font-size($font-size-base);
 }
+
+.underline-rpairme-lime {
+  display: inline-block;
+  padding-bottom: 0.08em;
+  border-bottom: 0.18em solid $rpairme-lime;
+  line-height: 1;
+}

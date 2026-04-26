@@ -37,6 +37,10 @@
               {include file='components/featured-categories.tpl'}
             {/block}
 
+            {block name='featured_brands'}
+              {include file='components/featured-brands.tpl'}
+            {/block}
+
             {hook h='displayHome' mod='ps_featuredproducts'}
             {hook h='displayHome' mod='ps_customtext'}
           {/block}

@@ -3,11 +3,9 @@
 
     {block name='featured_products_header'}
       <div class="featured-products__header d-flex align-items-center mb-3">
-        {block name='featured_products_title' hide}
-          <p class="h1 featured-products__title m-0">
-            {$smarty.block.child}
+          <p class="featured-products__title h1 font-weight-normal m-0">
+              Nuestros componentes <span class="font-weight-bold underline-rpairme-lime">más demandados</span>
           </p>
-        {/block}
         {block name='featured_products_navigation'}
           <div class="featured-products__navigation d-flex flex-grow-0 flex-shrink-0 ml-auto">
             <div class="swiper-button-prev swiper-button-custom position-static">

@@ -6,27 +6,32 @@
 {/if}
 
 {if $featuredCategories|@count > 0}
-  <section class="featured-categories container my-5">
-    <div class="featured-categories__header mb-4">
-      <p class="h1 featured-categories__title m-0">
-        {l s='Categorías destacadas' d='Shop.Theme.Catalog'}
-      </p>
+  {assign var=categoryImageBaseUrl value=$urls.img_ps_url|default:'/img/'}
+  <section class="featured-categories container">
+    <div class="featured-categories__header">
+      <h2 class="featured-categories__title">
+        <span>{l s='Componentes por' d='Shop.Theme.Catalog'}</span>
+        <span class="featured-categories__title-accent">{l s='categorías' d='Shop.Theme.Catalog'}</span>
+      </h2>
     </div>
 
-    <div class="featured-categories__list row">
+    <div class="featured-categories__list" role="list">
       {foreach from=$featuredCategories item=category}
-        <div class="featured-categories__item col-12 col-sm-6 col-lg-4 col-xl-3 mb-3">
+        {assign var=categoryImageUrl value="`$categoryImageBaseUrl`c/`$category.id_category`_thumb.jpg"}
+        <div class="featured-categories__item" role="listitem">
           <a
-            class="featured-categories__link card h-100 p-3 text-decoration-none text-reset"
+            class="featured-categories__link"
             href="{$link->getCategoryLink($category.id_category, $category.link_rewrite)|escape:'html':'UTF-8'}"
           >
-            <span class="h5 mb-2">{$category.name|escape:'html':'UTF-8'}</span>
-
-            {if !empty($category.description)}
-              <div class="featured-categories__description small text-muted">
-                {$category.description nofilter}
-              </div>
-            {/if}
+            <span class="featured-categories__icon">
+              <img
+                class="featured-categories__image"
+                src="{$categoryImageUrl|escape:'html':'UTF-8'}"
+                alt="{$category.name|escape:'html':'UTF-8'}"
+                loading="lazy"
+              >
+            </span>
+            <span class="featured-categories__name">{$category.name|escape:'html':'UTF-8'}</span>
           </a>
         </div>
       {/foreach}
