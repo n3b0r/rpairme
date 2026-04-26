@@ -20,7 +20,7 @@
   &__link {
     display: block;
     padding: map.get($spacers, 1);
-    color: $gray-700;
+    color: $rpairme-black;
     text-decoration: none;
     border-radius: $border-radius;
 
@@ -29,9 +29,8 @@
     }
 
     @include hover-focus() {
-      color: $black;
+      color: $rpairme-black;
       text-decoration: none;
-      background: $gray-100;
     }
   }
 

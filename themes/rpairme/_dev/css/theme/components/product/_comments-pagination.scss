@@ -1,15 +1,15 @@
 .comments-pagination {
-  ul {
-    @extend .pagination;
-    margin: 0;
-  }
+	ul {
+		@extend .pagination;
+		margin: 0;
+	}
 
-  li {
-    @extend .page-item;
-  }
+	li {
+		@extend .page-item;
+	}
 
-  span {
-    @extend .page-link;
-    cursor: pointer;
-  }
+	span {
+		@extend .page-link;
+		cursor: pointer;
+	}
 }

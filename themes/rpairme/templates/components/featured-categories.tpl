@@ -9,9 +9,9 @@
   {assign var=categoryImageBaseUrl value=$urls.img_ps_url|default:'/img/'}
   <section class="featured-categories container">
     <div class="featured-categories__header">
-      <h2 class="featured-categories__title">
-        <span>{l s='Componentes por' d='Shop.Theme.Catalog'}</span>
-        <span class="featured-categories__title-accent">{l s='categorías' d='Shop.Theme.Catalog'}</span>
+      <h2 class="h1 featured-brands__title font-weight-normal">
+        Componentes por
+        <span class="font-weight-bold underline-rpairme-lime">categorías</span>
       </h2>
     </div>
 

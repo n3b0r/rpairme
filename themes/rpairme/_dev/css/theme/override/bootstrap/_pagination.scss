@@ -1,0 +1,12 @@
+.page-link {
+  color: $rpairme-black;
+
+  &:hover,
+  &:focus {
+    color: $rpairme-black;
+  }
+}
+
+.page-item.active .page-link {
+  color: $rpairme-black;
+}

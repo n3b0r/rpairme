@@ -25,17 +25,21 @@
       margin-top: 0;
     }
 
+    &--new {
+      color: $rpairme-black;
+    }
+
     &--discount-percentage,
     &--discount-amount,
     &--discount {
-      background-color: $secondary;
+      background-color: $rpairme-green;
     }
 
     &--on-sale {
       order: -1;
       width: 100%;
       text-align: center;
-      background: $secondary;
+      background: $rpairme-green;
     }
   }
 }

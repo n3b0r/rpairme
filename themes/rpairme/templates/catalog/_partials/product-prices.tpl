@@ -29,9 +29,9 @@
       <div class="product-price">
         {if $product.has_discount}
           {if $product.discount_type === 'percentage'}
-            <span class="badge badge-danger">{l s='Save %percentage%' d='Shop.Theme.Catalog' sprintf=['%percentage%' => $product.discount_percentage_absolute]}</span>
+            <span class="badge badge-success">{l s='Save %percentage%' d='Shop.Theme.Catalog' sprintf=['%percentage%' => $product.discount_percentage_absolute]}</span>
           {else}
-            <span class="badge badge-danger">
+            <span class="badge badge-success">
               {l s='Save %amount%' d='Shop.Theme.Catalog' sprintf=['%amount%' => $product.discount_to_display]}
             </span>
           {/if}

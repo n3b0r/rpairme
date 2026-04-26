@@ -5,7 +5,7 @@
         {if $product.description}
           <li class="nav-item">
             <a
-              class="nav-link"
+              class="nav-link text-rpairme-black font-weight-bold"
               data-toggle="tab"
               href="#description"
               role="tab"
@@ -15,7 +15,7 @@
         {/if}
         <li class="nav-item">
           <a
-            class="nav-link"
+            class="nav-link text-rpairme-black font-weight-bold"
             data-toggle="tab"
             href="#product-details"
             role="tab"
@@ -23,7 +23,7 @@
             >{l s='Product Details' d='Shop.Theme.Catalog'}</a>
         </li>
         {if $product.attachments}
-          <li class="nav-item">
+          <li class="nav-item text-rpairme-black font-weight-bold">
             <a
               class="nav-link"
               data-toggle="tab"
@@ -35,7 +35,7 @@
         {foreach from=$product.extraContent item=extra key=extraKey}
           <li class="nav-item">
             <a
-              class="nav-link"
+              class="nav-link text-rpairme-black font-weight-bold"
               data-toggle="tab"
               href="#extra-{$extraKey}"
               role="tab"

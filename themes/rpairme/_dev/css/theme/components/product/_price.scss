@@ -1,7 +1,7 @@
 .price {
   @include font-size($font-size-lg);
   font-weight: 700;
-  color: $primary;
+  color: $rpairme-black;
 
   &--regular {
     font-weight: 400;

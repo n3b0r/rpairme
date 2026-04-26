@@ -24,21 +24,21 @@
  *}
 
   {foreach $linkBlocks as $linkBlock}
-    <div class="col-md-3 col-12 mb-lg-4">
+    <div class="col-sm-6 col-lg-4 footer-links__block">
       {assign var=_expand_id value=10|mt_rand:100000}
-      <div class="d-flex align-items-center mb-3 justify-content-between position-relative">
-        <span class="h4 mb-0">{$linkBlock.title}</span>
-        <a href="#footer_sub_menu_{$_expand_id}" class="icon-collapse stretched-link text-reset d-block d-md-none" data-toggle="collapse">
+      <div class="footer-links__header d-flex align-items-center justify-content-between position-relative">
+        <span class="footer-links__title">{$linkBlock.title}</span>
+        <a href="#footer_sub_menu_{$_expand_id}" class="footer-links__toggle icon-collapse stretched-link text-reset d-block d-md-none" data-toggle="collapse">
           <i class="material-icons d-block"></i>
         </a>
       </div>
       <div id="footer_sub_menu_{$_expand_id}" class="collapse d-md-block">
-        <ul class="links-list">
+        <ul class="footer-links__list list-unstyled">
           {foreach $linkBlock.links as $link}
-            <li class="links-list__elem">
+            <li class="footer-links__elem">
               <a
                   id="{$link.id}-{$linkBlock.id}"
-                  class="{$link.class} links-list__link"
+                  class="{$link.class} footer-links__link"
                   href="{$link.url}"
                   title="{$link.description}"
                   {if !empty($link.target)} target="{$link.target}" {/if}

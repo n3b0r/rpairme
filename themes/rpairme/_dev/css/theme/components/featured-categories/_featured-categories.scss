@@ -45,18 +45,14 @@
     overflow-x: auto;
     padding-bottom: rem-calc(8px);
     margin: 0 rem-calc(-15px);
-    scrollbar-width: thin;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
   }
 
   &__list::-webkit-scrollbar {
-    height: rem-calc(6px);
-  }
-
-  &__list::-webkit-scrollbar-thumb {
-    background: rgba($gray-900, 0.18);
-    border-radius: 99em;
+    display: none;
   }
 
   &__item {

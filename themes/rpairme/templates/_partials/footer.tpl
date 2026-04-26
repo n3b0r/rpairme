@@ -22,21 +22,47 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
-<div class="container">
-  <div class="row">
-    {block name='hook_footer_before'}
-      {hook h='displayFooterBefore'}
-    {/block}
-  </div>
-</div>
 <div class="footer-container">
   <div class="container">
-    <div class="row">
-      {block name='hook_footer'}
-        {hook h='displayFooter'}
-      {/block}
+    <div class="row footer-container__row">
+      <div class="col-lg-5 col-xl-4 footer-container__brand-col">
+        <div class="footer-brand">
+          <a href="{$urls.pages.index}" class="footer-brand__logo-link">
+            {images_block webpEnabled=$webpEnabled}
+              <img
+                {if !empty($shop.logo_details)}
+                  src="{$shop.logo_details.src}"
+                  width="{$shop.logo_details.width}"
+                  height="{$shop.logo_details.height}"
+                {else}
+                  src="{$shop.logo}"
+                {/if}
+                class="footer-brand__logo img-fluid"
+                alt="{$shop.name} {l s='logo' d='Shop.Theme.Global'}">
+            {/images_block}
+          </a>
+          <p class="footer-brand__tagline">{l s='Tu tienda de componentes electrónicos' d='Shop.Theme.Global'}</p>
+
+          {block name='hook_footer_contact'}
+            {hook h='displayFooter' mod='ps_contactinfo'}
+          {/block}
+
+          {block name='hook_footer_social'}
+            {hook h='displayFooterBefore' mod='ps_socialfollow'}
+          {/block}
+        </div>
+      </div>
+
+      <div class="col-lg-7 col-xl-8 footer-container__links-col">
+        <div class="row">
+          {block name='hook_footer_links'}
+            {hook h='displayFooter' mod='ps_linklist'}
+          {/block}
+        </div>
+      </div>
     </div>
-    <div class="row">
+
+    <div class="row footer-container__after">
       {block name='hook_footer_after'}
         {hook h='displayFooterAfter'}
       {/block}

@@ -23,46 +23,33 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
 
-<div class="col-md-3 col-12 mb-lg-4">
-
-  <div class="d-flex align-items-center mb-3 justify-content-between position-relative">
-    <span class="h4 mb-0">{l s='Store information' d='Shop.Theme.Global'}</span>
-    <a href="#footer_contact_list" class="icon-collapse stretched-link text-reset d-block d-md-none" data-toggle="collapse">
-      <i class="material-icons d-block"></i>
-    </a>
-  </div>
-
-  <div class="collapse d-md-block" id="footer_contact_list">
-    {$contact_infos.address.formatted nofilter}
-    {if $contact_infos.phone}
-      <br>
-      {* [1][/1] is for a HTML tag. *}
-      {l s='Call us: [1]%phone%[/1]'
-        sprintf=[
-        '[1]' => "<a href='tel:{$contact_infos['phone']|replace:' ':''}'>",
-        '[/1]' => '</a>',
-        '%phone%' => $contact_infos.phone
-        ]
-        d='Shop.Theme.Global'
-      }
-    {/if}
-    {if $contact_infos.fax}
-      <br>
-      {* [1][/1] is for a HTML tag. *}
-      {l
-        s='Fax: [1]%fax%[/1]'
-        sprintf=[
-          '[1]' => '<span>',
-          '[/1]' => '</span>',
-          '%fax%' => $contact_infos.fax
-        ]
-        d='Shop.Theme.Global'
-      }
-    {/if}
+<div class="footer-contact">
+  <ul class="footer-contact__list list-unstyled mb-0">
     {if $contact_infos.email && $display_email}
-      <br>
-        {mailto address=$contact_infos.email encode="javascript"}
+      <li class="footer-contact__item">
+        <span class="footer-contact__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3.75 7.5h16.5a.75.75 0 0 1 .75.75v7.5a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75v-7.5a.75.75 0 0 1 .75-.75Z"></path><path d="m3.75 8.25 8.25 6 8.25-6"></path></svg>
+        </span>
+        <a class="footer-contact__link" href="mailto:{$contact_infos.email}">{$contact_infos.email}</a>
+      </li>
     {/if}
-  </div>
 
+    {if $contact_infos.phone}
+      <li class="footer-contact__item">
+        <span class="footer-contact__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M2.25 4.5c0-1.243 1.007-2.25 2.25-2.25h2.098c.521 0 .99.318 1.182.803l1.43 3.576a1.125 1.125 0 0 1-.258 1.223l-1.287 1.288a13.5 13.5 0 0 0 6.196 6.196l1.288-1.287a1.125 1.125 0 0 1 1.223-.258l3.576 1.43c.485.192.803.66.803 1.182V19.5a2.25 2.25 0 0 1-2.25 2.25h-.75C9.29 21.75 2.25 14.71 2.25 6V4.5Z"></path></svg>
+        </span>
+        <a class="footer-contact__link" href="tel:{$contact_infos.phone|replace:' ':''}">{$contact_infos.phone}</a>
+      </li>
+    {/if}
+
+    {if $contact_infos.address.formatted}
+      <li class="footer-contact__item footer-contact__item--address">
+        <span class="footer-contact__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21s6-5.686 6-11.25a6 6 0 1 0-12 0C6 15.314 12 21 12 21Z"></path><path d="M12 12.75a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path></svg>
+        </span>
+        <div class="footer-contact__text">{$contact_infos.address.formatted nofilter}</div>
+      </li>
+    {/if}
+  </ul>
 </div>

@@ -129,6 +129,26 @@
     #{$self}__saving--empty {
       visibility: hidden;
     }
+
+    @include media-breakpoint-down(sm) {
+      #{$self}__thumb--card {
+        min-height: rem-calc(188px);
+      }
+
+      #{$self}__thumb-link {
+        min-height: rem-calc(188px);
+        padding: rem-calc(20px) rem-calc(16px);
+      }
+
+      #{$self}__thumb-link img {
+        max-height: rem-calc(144px);
+      }
+
+      #{$self}__discount-badge {
+        height: rem-calc(40px);
+        font-size: rem-calc(10.8px);
+      }
+    }
   }
 
   &__functional-btn {

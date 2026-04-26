@@ -32,7 +32,7 @@
             {block name='breadcrumb_item'}
               <li {if $smarty.foreach.breadcrumb.last}class="breadcrumb-item active" aria-current="page"{else}class="breadcrumb-item"{/if}>
                 {if !$smarty.foreach.breadcrumb.last}
-                  <a href="{$path.url}">
+                  <a class="text-rpairme-black font-weight-bold" href="{$path.url}">
                 {/if}
                   {$path.title}
                 {if !$smarty.foreach.breadcrumb.last}
